@@ -12,7 +12,7 @@ namespace SCTuto.Services
     public class EmocaoServico
     {
         private readonly string _key;
-        private readonly string _reconhecimentoEmocaoUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize";
+        private readonly string _reconhecimentoEmocaoUrl = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize"; //Coloque a URL do seu serviço
 
         public EmocaoServico(string key) => _key = key;
 

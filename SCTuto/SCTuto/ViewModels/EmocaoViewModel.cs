@@ -14,7 +14,7 @@ namespace SCTuto.ViewModels
 {
     public class EmocaoViewModel : BaseViewModel
     {
-        private const string EmocaoApiKey = "f21c2dfc44df4dc79ce2f5785d89181d";
+        private const string EmocaoApiKey = "f21c2dfc44df4dc79ce2f5785d89181d"; // Coloque sua chave
         private readonly EmocaoServico _servicoEmocao = new EmocaoServico(EmocaoApiKey);
         private Stream _imagemStream;
 
