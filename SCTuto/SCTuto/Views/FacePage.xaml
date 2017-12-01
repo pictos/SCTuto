@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SCTuto.Views.FacePage"
+             Title="ID Facial">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Button Text="Identificar Pessoa" Command="{Binding IdCommand}"/>
+            <ListView ItemsSource="{Binding Pessoas}"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5" Orientation="Horizontal">
+                                <Image Source="{Binding FotoUrl}" HeightRequest="200"/>
+                                <StackLayout Padding="5" Orientation="Vertical">
+                                    <Label Text="{Binding Nome}" FontSize="Large"/>
+                                    <Label Text="{Binding Partido}" FontSize="Medium"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

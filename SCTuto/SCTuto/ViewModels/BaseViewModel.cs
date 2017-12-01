@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace SCTuto.ViewModels
 {
+
     public class BaseViewModel : INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -20,7 +24,18 @@ namespace SCTuto.ViewModels
 
             storage = value;
             OnPropertyChanged(propertyName);
+
             return true;
+        }
+
+        public async Task DisplayAlert(string title, string message, string cancel)
+        {
+            await Application.Current.MainPage.DisplayAlert(title, message, cancel);
+        }
+
+        public async Task DisplayAlert(string title, string message, string accept, string cancel)
+        {
+            await Application.Current.MainPage.DisplayAlert(title, message, accept, cancel);
         }
     }
 }

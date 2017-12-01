@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using SCTuto.Views;
 using Xamarin.Forms;
 
 namespace SCTuto
@@ -13,7 +9,14 @@ namespace SCTuto
         {
             InitializeComponent();
 
-            MainPage = new SCTuto.MainPage();
+            MainPage = new TabbedPage
+            {
+                Children =
+                {
+                    new EmocaoView(),
+                    new FacePage()
+                }
+            };
         }
 
         protected override void OnStart()

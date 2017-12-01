@@ -22,7 +22,7 @@ namespace SCTuto.Services
 
             httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _key);
 
-            var stringContent = new StringContent(@"{""url"":" + imageUrl + @"""}");
+            var stringContent = new StringContent(@"{""url"":""" + imageUrl + @"""}");
 
             stringContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 

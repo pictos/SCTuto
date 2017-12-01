@@ -56,6 +56,7 @@ namespace SCTuto.Views
                 TextColor = Color.Red,
                 FontSize = 22
             };
+            msgErroLabel.SetBinding(Label.TextProperty, "MenssagemErro");
 
             var emocaoDataTemplate = new DataTemplate(() =>
             {
@@ -192,7 +193,7 @@ namespace SCTuto.Views
                 {
                     new StackLayout
                     {
-                        Orientation = StackOrientation.Vertical,
+                        Orientation = StackOrientation.Horizontal,
                         Children =
                         {
                             tirarFotoButton,
