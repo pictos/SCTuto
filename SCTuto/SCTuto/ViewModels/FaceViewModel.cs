@@ -17,7 +17,7 @@ namespace SCTuto.ViewModels
         FaceServiceClient client;
 
         private readonly string url = "https://brazilsouth.api.cognitive.microsoft.com/face/v1.0"; //Coloque a URL do seu serviço
-        private readonly string apiKey = "c85e19a4b37e4cd087bc68ef77fd4c8f"; //Coloque sua chave
+        private readonly string apiKey = ""; //Coloque sua chave
 
         public Command IdCommand { get; }
 
